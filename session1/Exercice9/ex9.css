@@ -1,0 +1,51 @@
+/* Reset basique */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1e1e1e;
+}
+
+.container {
+    text-align: center;
+}
+
+/* Bouton animé */
+.animated-btn {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    font-size: 1.2rem;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    background: #ff6b6b;
+    transition: background 0.3s, box-shadow 0.3s;
+    box-shadow: 0 0 10px #ff6b6b;
+}
+
+/* Hover: couleur + glow */
+.animated-btn:hover {
+    animation: glow 1.5s infinite alternate;
+    background: #ff4b4b;
+}
+
+/* Animation glow */
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 10px #ff4b4b, 0 0 20px #ff6b6b, 0 0 30px #ff4b4b;
+    }
+    50% {
+        box-shadow: 0 0 20px #ff4b4b, 0 0 30px #ff6b6b, 0 0 40px #ff4b4b;
+    }
+    100% {
+        box-shadow: 0 0 10px #ff4b4b, 0 0 20px #ff6b6b, 0 0 30px #ff4b4b;
+    }
+}
