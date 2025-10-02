@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navbar Responsive</title>
+  <link rel="stylesheet" href="ex6.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo"><span>
+Fakher
+      </span>'s Site</div>
+      <ul class="nav-links">
+        <li><a href="#">Accueil</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="content">
+      <h1>Bienvenue sur notre site !</h1>
+      <p>Navigation moderne et responsive avec menu burger en mobile.</p>
+    </section>
+  </main>
+
+  <script>
+    // Burger menu toggle
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('.nav-links');
+
+    burger.addEventListener('click', () => {
+      nav.classList.toggle('nav-active');
+      // Animation des lignes du burger
+      burger.classList.toggle('toggle');
+    });
+  </script>
+</body>
+</html>
